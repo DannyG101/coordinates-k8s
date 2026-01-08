@@ -26,11 +26,11 @@ spec:
         ports:
         - containerPort: 5432
         volumeMounts:
-        - name: pod_volume
+        - name: www
           mountPath:  /var/lib/postgresql/data
   volumeClaimTemplates:
   - metadata:
-      name: pod_volume
+      name: www
     spec:
       accessModes: ["ReadWriteOnce"]
       resources:
